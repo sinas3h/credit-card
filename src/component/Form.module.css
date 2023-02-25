@@ -1,0 +1,191 @@
+
+.right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 65%;
+    
+}
+
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 35rem;
+    height: 44rem;
+    justify-content: space-evenly;
+    color: rgb(25, 25, 25);
+    right: 30%;
+    position: relative;
+    
+}
+
+.form div {
+    position: relative;
+}
+
+
+
+.label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: hsla(278, 68%, 11%, 0.852)
+}
+
+
+
+Input {
+    height: 4.3rem;
+    border-radius: 8px;
+    border: 1.5px solid rgb(202, 202, 202 , .5);
+    font-weight: 500;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 1.1rem;
+    margin-top: .9rem;
+    transition: .2s;
+}
+
+.errorsInput {
+    border-color: hsla(0, 100%, 66%);
+}
+
+.form input:focus {
+    border: 1.5px solid hsl(249, 99%, 64%);
+    outline: 0;
+}
+
+.form input::placeholder {
+    font-family: 'Space Grotesk', sans-serif;
+    color: rgba(186, 186, 186, 0.85);
+    font-size: 1.7rem;
+    align-items: center;
+    transform:translateY(1px)
+    /* padding-left: .5rem; */
+}
+
+/* .form input[type=text] {
+    padding-left: .5rem;
+
+} */
+
+.shortInput {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.shortInput div {
+    width: 50%;
+}
+
+.shortLeft {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.twoDate {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    width: 100%
+}
+
+.shortLeft div {
+    width: 100%;
+}
+
+.twoDate input {
+    width: 42%;
+    margin-right: .6rem;
+}
+
+.submit {
+    border: 1.5px solid #1f0b30;
+    border-radius: 8px;
+    width: 100%;
+    height: 5rem;
+    background-color: #1f0b30;
+    color: rgba(255, 255, 255, 0.955);
+    font-size: 1.8rem;
+    font-family: 'Space Grotesk', sans-serif;
+    cursor: pointer;
+}
+
+/* .submit:focus {
+    transition: .8s;
+    opacity: 0;
+} */
+
+.divComplete {
+    text-align: center;
+    transition: .5s;
+}
+
+.divCompleteDetail h2 {
+    color: #28123a;
+    font-size: 2.8rem;
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem;
+}
+
+.divCompleteDetail p {
+    font-size: 1.8rem;
+    color: rgba(116, 116, 116, 0.901);
+}
+
+.errorsspan {
+    display: block;
+    position: absolute;
+    bottom: -1.6rem;
+    font-size: 1.1rem;
+    color: hsla(0, 100%, 66%, 0.845);
+    font-weight: 600;
+}
+
+
+
+/* ------------------------------------------------------ */
+
+@media screen and (max-width : 1400px) {
+    .form {
+        right: 20%;
+    }
+    
+}
+
+@media screen and (max-width : 1120px) {
+    .form {
+        right: 12%;
+    }
+    
+}
+
+@media screen and (max-width : 1000px) {
+
+    .right {
+        display: flex;
+        width: 100%;
+        height: calc(65vh - 6rem);
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .form {
+        justify-content: space-evenly;
+        position: static;
+        right: 0;
+    }
+}
+
+
+@media screen and (max-width : 600px) {
+    .form {
+        scale: .8;
+    }
+}

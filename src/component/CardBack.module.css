@@ -1,0 +1,65 @@
+.container {
+    display: flex;
+    position: absolute;
+    top : 53%;
+    left: 20%;
+    justify-content: center;
+}
+
+
+
+.cardCvc {
+    position:absolute;
+    /* background: tomato; */
+    top: 46%;
+    right: 13%;
+    color: white;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+}
+
+.cardBack {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+    border-radius: 15px;
+}
+
+/* -------------------------------------------------------------- */
+
+@media screen and (max-width : 1400px) {
+    .container {
+        left: 13%;
+    }
+    
+}
+
+
+@media screen and (max-width : 1120px) {
+    .container {
+        left: 10%;
+    }
+    
+}
+
+@media screen and (max-width : 1000px) {
+    .container {
+        left: 25vw;
+        top: 7%;
+        z-index: -1;
+        scale: .95;
+    }
+}
+
+@media screen and (max-width : 600px) {
+    .container {
+        transform: translateX(-15rem);
+        top: 6%;
+        scale: .63;
+    }
+}
+
+@media screen and (max-width : 380px) {
+    .container {
+        transform: translateX(-18rem);
+        scale: .60;
+    }
+}

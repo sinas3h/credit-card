@@ -1,0 +1,120 @@
+.container {
+    display: flex;
+    position: absolute;
+    top : 15%;
+    left: 15%;
+    justify-content: center;
+}
+
+.cardFront {
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+
+.cardWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    position: absolute;
+    top: 0;
+    width: 85%;
+    height: 100%;
+    text-align: center;
+}
+
+.cardCircle {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.cardCircleBig {
+    color: white;
+    background-color: white;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 100%;
+    margin-right: 1.5rem;
+}
+
+.cardCircleLittle {
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+    width: 2rem;
+    height: 2rem;
+    border: .5px solid white;
+    border-radius: 100%;
+}
+
+.cardNumber {
+    /* position:absolute;
+    top : 240px;
+    left : -260px; */
+    color: white;
+    font-size: 2.6rem;
+    letter-spacing: 3px;
+    /* width: 80%; */
+}
+
+.cardData {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.cardName {
+    /* position:absolute;
+    top : 300px;
+    left : -260px; */
+    color: white;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+}
+
+.cardDate {
+    /* position:absolute;
+    top : 300px;
+    left : 60px; */
+    color: white;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+}
+
+@media screen and (max-width : 1400px) {
+    .container {
+        left: 10%;
+    }
+    
+}
+
+@media screen and (max-width : 1120px) {
+    .container {
+        left: 6%;
+    }
+    
+}
+
+@media screen and (max-width : 1000px) {
+    .container {
+        left: 12vw;
+        top: 21%;
+        scale: .95;
+    }
+}
+
+@media screen and (max-width : 600px) {
+    .container {
+        transform: translateX(-15rem);
+        scale: .63;
+    }
+}
+
+@media screen and (max-width : 380px) {
+    .container {
+        transform: translateX(-18rem);
+        scale: .60;
+    }
+}
+
