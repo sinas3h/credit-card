@@ -20,8 +20,9 @@ export const validate = (data) => {
     }   
     else if(!numberRegex.test(data.cardNumber)) {
         errors.cardNumber = 'Wrong format , numbers only'
-    }
-    else {
+    } else if(data.cardNumber.length <16) {
+        errors.cardNumber = 'card number is short'
+    } else {
         delete errors.cardNumber
     }
 
@@ -31,7 +32,9 @@ export const validate = (data) => {
         errors.month = "can't be blank"
     } else if(!numberRegex.test(data.month)) {
         errors.month = 'numbers only'
-    }   else {
+    } else if(data.month.length <2) {
+        errors.month = 'date is short'
+    } else {
         delete errors.month
     }
 
@@ -41,6 +44,8 @@ export const validate = (data) => {
         errors.year = "can't be blank"
     } else if(!numberRegex.test(data.year)) {
         errors.year = 'numbers only'
+    } else if(data.year.length <2) {
+        errors.year = 'date is short'
     } else {
         delete errors.year
     }
@@ -51,6 +56,8 @@ export const validate = (data) => {
         errors.cvc = "can't be blank"
     } else if(!numberRegex.test(data.cvc)) {
         errors.cvc = 'numbers only'
+    } else if(data.cvc.length <3) {
+        errors.cvc = 'date is short'
     } else {
         delete errors.cvc
     }

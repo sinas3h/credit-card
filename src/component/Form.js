@@ -1,33 +1,24 @@
 import React, { createContext, useEffect, useState } from 'react';
 
 //component
-import ThankYou from './ThankYou';
+import Compeleted from './Compeleted';
 
 //style
 import style from './Form.module.css'
-import { validate } from './validate';
-
-
-// const mountedStyle = { animation: "inAnimation 550ms ease-in" };
-// const unmountedStyle = {
-//   animation: "outAnimation 550ms ease-out",
-//   animationFillMode: "forwards" 
-// }
-
-
+import { validate } from '../function/validate';
 
 
 export const dataContext = createContext()
 
 const Form = ({children}) => {
 
+
+    // state ----------------------------------
+
   const [showForm , setShowForm] = useState(true)
   const [showAnime , setShowAnime] = useState(false)
 
 
-
-
-  // const data ={name , number , cvc , month , year}
   const [data , setData] = useState({
     name : '' ,
     cardNumber : '' ,
@@ -40,16 +31,19 @@ const Form = ({children}) => {
 
   const [touched , setToched] = useState({})
 
+  // useEffect ----------------------------------
+
+  useEffect(() => {
+    setErrosDisplay(validate(data))
+  } , [data , touched])
+
+
+  // fuction ----------------------------------
 
   const cardHandler = e =>{
     setData({...data , [e.target.name] : e.target.value })
   }
 
-  
-  useEffect(() => {
-    setErrosDisplay(validate(data))
-  } , [data , touched])
-  
   
   const focusHandler= e => {
     setToched({...touched , [e.target.name] : true})
@@ -59,7 +53,7 @@ const Form = ({children}) => {
   const handleKey =(e) =>{
     if (e.keyCode === 13) {
       e.preventDefault()
-      e.target.find('input').focus()
+      // e.target.find('input').focus()
       // if (e.target.nextSibling) {
         //   nextSibling.focus()
         // }
@@ -80,13 +74,9 @@ const Form = ({children}) => {
           cvc : 'true',
         })
       }
-      console.log("submit")
     }
     
-    console.log(data)
-    console.log(errosDisplay)
-    console.log(touched)
-    console.log(Boolean(Object.keys(errosDisplay).length))
+    
   
   return (
     <>
@@ -102,10 +92,10 @@ const Form = ({children}) => {
             name='name'
             value={data.name}
             autoComplete='off'
+            maxLength='30'
             onChange={cardHandler}
             onKeyDown={handleKey}
             onFocus={focusHandler}
-            // autoFocus={true}
             >
           </input>
           {errosDisplay.name && touched.name && <span className={style.errorsspan}>{errosDisplay.name}</span>}
@@ -189,7 +179,7 @@ const Form = ({children}) => {
         </form>
                 
         :
-        <ThankYou anime={showAnime} forme={showForm} />
+        <Compeleted dataAnime={showAnime} />
       
         }
 

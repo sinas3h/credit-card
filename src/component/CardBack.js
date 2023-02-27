@@ -1,10 +1,14 @@
 import React, { useContext } from 'react';
 
+// context
 import { dataContext } from './Form';
 
 //style
 import style from './CardBack.module.css'
+
+// image
 import cardBack from '../images/bg-card-back.png'
+
 
 const CardBack = () => {
 

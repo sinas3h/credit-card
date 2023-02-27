@@ -1,18 +1,23 @@
-import React from 'react';
-import { useContext } from 'react';
-import { formatCardNumber } from './number';
+import React , { useContext } from 'react';
+
+// function
+import { formatCardNumber } from '../function/number';
 
 //styles
 import style from './Card.module.css'
+
+// context
 import { dataContext } from './Form';
 
 //images
 import cardFront from '../images/bg-card-front.png'
 
+
 const Card = () => {
-    // const {name , number , month , year} = props.data
+    
     const data = useContext(dataContext)
     const {name , cardNumber , month , year} = data
+
     return (
         <div className={style.container}>
 

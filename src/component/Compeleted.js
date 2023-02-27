@@ -3,17 +3,17 @@ import React from 'react';
 
 
 //style
-import style from './ThankYou.module.css'
+import style from './Compeleted.module.css'
 
 //images
 import iconComplete from '../images/icon-complete.svg'
 
 const ThankYou = (props) => {
-    console.log(props.anime)
-    console.log(props.form)
+    console.log(props.dataAnime)
     return (
-        <div className={props.anime ? `${style.transitionDivActive} ${style.form} ${style.divComplete}` : style.transitionDivDeActive}
-        onAnimationEnd={() => { if (!props.anime) props.forme(true) }}>
+        <div className={props.dataAnime ? `${style.transitionDivActive} ${style.form} ${style.divComplete}` : style.transitionDivDeActive}
+        // onAnimationEnd={() => { if (!props.dataAnime) props.dataForm(true) }}
+        >
             <div>
               <img src={iconComplete} alt='complete' />
             </div>
