@@ -4,7 +4,6 @@
     justify-content: flex-end;
     align-items: center;
     width: 65%;
-    
 }
 
 
@@ -18,6 +17,7 @@
     color: rgb(25, 25, 25);
     right: 30%;
     position: relative;
+    transition: .8s;
     
 }
 
@@ -114,29 +114,17 @@ Input {
     font-size: 1.8rem;
     font-family: 'Space Grotesk', sans-serif;
     cursor: pointer;
+    transition: .2s;
+}
+
+.submit:hover {
+    background-color: #47206a;
 }
 
 /* .submit:focus {
     transition: .8s;
     opacity: 0;
 } */
-
-.divComplete {
-    text-align: center;
-    transition: .5s;
-}
-
-.divCompleteDetail h2 {
-    color: #28123a;
-    font-size: 2.8rem;
-    letter-spacing: 3px;
-    margin-bottom: 1.5rem;
-}
-
-.divCompleteDetail p {
-    font-size: 1.8rem;
-    color: rgba(116, 116, 116, 0.901);
-}
 
 .errorsspan {
     display: block;
@@ -147,7 +135,40 @@ Input {
     font-weight: 600;
 }
 
+/* .transitionDivActive {
+    position: relative;
+    right: 30%;
+    animation: inAnimation 350ms ease-in
+}
 
+.transitionDivDeActive {
+    animation: outAnimation 550ms ease-out;
+    animation-fill-mode: forwards
+}
+
+
+
+
+@keyframes inAnimation {
+    0% {
+      opacity: 0;
+      visibility: hidden;
+    }
+    100% {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  
+  @keyframes outAnimation {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  } */
 
 /* ------------------------------------------------------ */
 
@@ -185,6 +206,10 @@ Input {
 
 
 @media screen and (max-width : 600px) {
+    .right {
+        align-items: flex-end;
+    }
+    
     .form {
         scale: .8;
     }

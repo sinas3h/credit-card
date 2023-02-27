@@ -99,7 +99,7 @@
 @media screen and (max-width : 1000px) {
     .container {
         left: 12vw;
-        top: 21%;
+        top: 18%;
         scale: .95;
     }
 }
@@ -107,6 +107,7 @@
 @media screen and (max-width : 600px) {
     .container {
         transform: translateX(-15rem);
+        top: 12%;
         scale: .63;
     }
 }
@@ -115,6 +116,13 @@
     .container {
         transform: translateX(-18rem);
         scale: .60;
+    }
+}
+
+@media screen and (max-width : 350px) {
+    .container {
+        transform: translateX(-22rem);
+        scale: .55;
     }
 }
 

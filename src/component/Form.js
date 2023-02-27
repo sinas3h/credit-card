@@ -1,11 +1,18 @@
 import React, { createContext, useEffect, useState } from 'react';
 
-//images
-import iconComplete from '../images/icon-complete.svg'
+//component
+import ThankYou from './ThankYou';
 
 //style
 import style from './Form.module.css'
 import { validate } from './validate';
+
+
+// const mountedStyle = { animation: "inAnimation 550ms ease-in" };
+// const unmountedStyle = {
+//   animation: "outAnimation 550ms ease-out",
+//   animationFillMode: "forwards" 
+// }
 
 
 
@@ -15,6 +22,8 @@ export const dataContext = createContext()
 const Form = ({children}) => {
 
   const [showForm , setShowForm] = useState(true)
+  const [showAnime , setShowAnime] = useState(false)
+
 
 
 
@@ -61,6 +70,7 @@ const Form = ({children}) => {
       e.preventDefault()
       if(!Object.keys(errosDisplay).length){
         setShowForm(!e)
+        setShowAnime(true)
       } else {
         setToched({
           name : 'true',
@@ -179,19 +189,10 @@ const Form = ({children}) => {
         </form>
                 
         :
-        <div className={`${style.form} ${style.divComplete}`}>
-            <div>
-              <img src={iconComplete} alt='complete' />
-            </div>
-            <div className={style.divCompleteDetail}>
-              <h2>THANK YOU!</h2>
-              <p>We've added your card details</p>
-            </div>
-            <div>
-              <button type='submit' className={style.submit}>Continue</button>
-            </div>
-        </div> }
-                
+        <ThankYou anime={showAnime} forme={showForm} />
+      
+        }
+
       </div>
 
       <dataContext.Provider value={data}>
