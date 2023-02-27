@@ -66,11 +66,6 @@ Input {
     /* padding-left: .5rem; */
 }
 
-/* .form input[type=text] {
-    padding-left: .5rem;
-
-} */
-
 .shortInput {
     display: flex;
     flex-direction: row;
@@ -91,7 +86,6 @@ Input {
 .twoDate {
     display: flex;
     flex-direction: row;
-    /* justify-content: space-between; */
     width: 100%
 }
 
@@ -121,11 +115,6 @@ Input {
     background-color: #47206a;
 }
 
-/* .submit:focus {
-    transition: .8s;
-    opacity: 0;
-} */
-
 .errorsspan {
     display: block;
     position: absolute;
@@ -135,40 +124,6 @@ Input {
     font-weight: 600;
 }
 
-/* .transitionDivActive {
-    position: relative;
-    right: 30%;
-    animation: inAnimation 350ms ease-in
-}
-
-.transitionDivDeActive {
-    animation: outAnimation 550ms ease-out;
-    animation-fill-mode: forwards
-}
-
-
-
-
-@keyframes inAnimation {
-    0% {
-      opacity: 0;
-      visibility: hidden;
-    }
-    100% {
-      opacity: 1;
-      visibility: visible;
-    }
-  }
-  
-  @keyframes outAnimation {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-      visibility: hidden;
-    }
-  } */
 
 /* ------------------------------------------------------ */
 
