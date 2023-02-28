@@ -19,6 +19,7 @@ const ThankYou = (props) => {
             </div>
             <div className={style.divCompleteDetail}>
               <h2>THANK YOU!</h2>
+              <h3>" {props.data.name.toUpperCase()} "</h3>
               <p>We've added your card details</p>
             </div>
             <div>

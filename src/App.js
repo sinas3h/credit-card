@@ -9,7 +9,7 @@ import Form from './component/Form';
 import style from './App.module.css'
 
 //image
-import leftBack from './images/bg-main-desktop.png'
+import gradiantBg from './images/bg-main-desktop.png'
 
 
 const App = () => {
@@ -17,7 +17,7 @@ const App = () => {
   return (
     <div className={style.app} >
       <div className={style.background}>
-      <div className={style.left}><img src={leftBack} alt='leftBack' /></div>
+      <div className={style.gradiantBg}><img src={gradiantBg} alt='leftBack' /></div>
 
       <Form className={style.form}>
         <Card className={style.card} />

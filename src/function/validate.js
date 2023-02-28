@@ -10,6 +10,8 @@ export const validate = (data) => {
         errors.name = 'Wrong format , letters only'
     } else if(!data.name.length){
         errors.name = "can't be blank"
+    } else if(data.name.length <5) {
+        errors.name = 'name is short'
     } else {
         delete errors.name
     }
@@ -57,7 +59,7 @@ export const validate = (data) => {
     } else if(!numberRegex.test(data.cvc)) {
         errors.cvc = 'numbers only'
     } else if(data.cvc.length <3) {
-        errors.cvc = 'date is short'
+        errors.cvc = 'value is short'
     } else {
         delete errors.cvc
     }

@@ -7,7 +7,7 @@ import Compeleted from './Compeleted';
 import style from './Form.module.css'
 import { validate } from '../function/validate';
 
-
+// context
 export const dataContext = createContext()
 
 const Form = ({children}) => {
@@ -80,7 +80,7 @@ const Form = ({children}) => {
   
   return (
     <>
-      <div className={style.right}>
+      <div className={style.mainWhiteBg}>
         {showForm ? <form className={style.form}>
 
         <div>
@@ -179,7 +179,7 @@ const Form = ({children}) => {
         </form>
                 
         :
-        <Compeleted dataAnime={showAnime} />
+        <Compeleted data={data} dataAnime={showAnime} />
       
         }
 
